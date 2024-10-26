@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Halloween!</title>
+    <!-- Estilos directamente dentro del HTML -->
+    <style>
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #000;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      h1 {
+        color: orange;
+        font-size: 48px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 5px black;
+      }
+
+      #currentTime {
+        font-size: 24px;
+        margin-bottom: 30px;
+      }
+
+      video {
+        border: 5px solid orange;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title">¡Feliz Halloween!</h1>
+    <p id="currentTime"></p>
+
+    <!-- Video con borde decorativo -->
+    <video width="600" controls>
+      <source src="happyhalloweenpng.mp4" type="video/mp4">
+      Tu navegador no soporta la reproducción de videos.
+    </video>
+
+    <!-- JavaScript para mostrar la hora actual en formato español -->
+    <script>
+      function updateTime() {
+        const currentTimeElement = document.getElementById("currentTime");
+        const now = new Date();
+        // Mostrar la hora en formato español
+        currentTimeElement.innerText = `Hora Actual: ${now.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', second: '2-digit' })}`;
+      }
+
+      setInterval(updateTime, 1000);
+      updateTime(); // Llamar de inmediato al cargar la página
+    </script>
+  </body>
+</html>
