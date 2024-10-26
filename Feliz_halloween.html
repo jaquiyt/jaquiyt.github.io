@@ -25,10 +25,17 @@
         margin-bottom: 30px;
       }
 
-      video {
+      /* Estilos para el contenedor del iframe */
+      .video-container {
+        display: inline-block;
         border: 5px solid orange;
         border-radius: 10px;
+        padding: 5px; /* Espacio entre iframe y borde */
         box-shadow: 0 0 15px rgba(255, 165, 0, 0.7);
+      }
+
+      iframe {
+        border-radius: 10px;
       }
     </style>
   </head>
@@ -36,13 +43,10 @@
     <h1 class="title">¡Feliz Halloween!</h1>
     <p id="currentTime"></p>
 
-    <!-- Video con borde decorativo -->
-    <video width="600" controls>
-     #<source src="happyhalloweenpng.mp4" type="video/mp4">
-     #Tu navegador no soporta la reproducción de videos. ¡Feliz Halloween!
-      <iframe width="600" height="400" src="https://www.youtube.com/embed/https://youtu.be/71VMMJCOuys" frameborder="0" allowfullscreen></iframe>
-
-    </video>
+    <!-- Contenedor con estilos de borde para el iframe -->
+    <div class="video-container">
+      <iframe width="600" height="400" src="https://www.youtube.com/embed/71VMMJCOuys" frameborder="0" allowfullscreen></iframe>
+    </div>
 
     <!-- JavaScript para mostrar la hora actual en formato español -->
     <script>
