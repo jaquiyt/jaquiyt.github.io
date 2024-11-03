@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Holaa</title>
+
+  <!-- Enlace a Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      background-color: #002147; /* Azul oscuro */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      overflow: hidden; /* Oculta cualquier exceso de animación */
+      position: relative;
+    }
+
+    h1 {
+      font-size: 48px; /* Tamaño del texto */
+      background: linear-gradient(90deg, #efb810, #ff5722); /* Degradado dorado */
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      /* Sombra eliminada */
+    }
+
+    .star {
+      width: 3px; /* Aumentar el tamaño de las estrellas */
+      height: 3px;
+      background-color: #ffd700; /* Color dorado para las estrellas */
+      border-radius: 50%;
+      position: absolute;
+      animation: twinkle 1.5s infinite ease-in-out alternate; /* Aumentar velocidad de parpadeo */
+      opacity: 0.9; /* Hacer las estrellas más brillantes */
+    }
+
+    @keyframes twinkle {
+      0% { opacity: 0.5; } /* Menos opacidad al mínimo */
+      100% { opacity: 1; } /* Máxima opacidad al 100% */
+    }
+  </style>
+</head>
+<body>
+  <h1>
+    Buenas noches preciosa
+  </h1>
+
+  <!-- Script para un mensaje interactivo al hacer clic en el título -->
+  <script>
+    document.querySelector('h1').addEventListener('click', function() {
+      alert('¡Hola! ¡Espero que tengas una noche maravillosa!');
+    });
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const starContainer = document.body;
+      for (let i = 0; i < 200; i++) { // Aumentar el número de estrellas a 200
+        const star = document.createElement("div");
+        star.classList.add("star");
+        star.style.top = Math.random() * 100 + "vh"; // Posición vertical aleatoria
+        star.style.left = Math.random() * 100 + "vw"; // Posición horizontal aleatoria
+        starContainer.appendChild(star);
+      }
+    });
+  </script>
+</body>
+</html>
