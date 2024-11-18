@@ -13,13 +13,23 @@
         body {
             background-color: #e3a26f;
         }
-        h2, h3 {
+        h2 {
             color: green;
             padding-left: 20px;
+            text-align: left;
+        }
+        h3 {
+            color: green;
+            margin-left: 40px; /* Margen para que no esté pegado a la izquierda */
+            text-align: left;
         }
         #plato {
             height: 300px;
-            width: 300px; /* corrected from 'weight' */
+            width: 300px;
+            display: block;
+        }
+        .menu-section {
+            margin-bottom: 10px; /* Espacio reducido entre platos */
         }
     </style>
 </head>
@@ -29,31 +39,33 @@
         <div id="logo">
             <img src="./kebabbomba.png" alt="Kebab Bomba Logo">
         </div>
-        <p>
-            ¡Una <span style="color: red;">EXPLOSIÓN</span> de sabores!
-        </p>  
+        <p>¡Una <span style="color: red;">EXPLOSIÓN</span> de sabores!</p>  
     </div>
-
-    <div id="Menú">
+<br>
+    <div id="Menú" style="text-align: left; padding-left: 20px;">
         <h2>Algunas opciones para elegir:</h2>
 
-        <h3>"C4"</h3>
-        <div id="plato">
-            <img src="./C4.jpeg" alt="C4 Kebab">
+        <div class="menu-section">
+            <h3>"C4"</h3>
+            <img id="plato" src="./C4.jpeg" alt="C4 Kebab">
         </div>
 
-        <h3>"Granadas" (Doble)</h3>
-        <div id="plato">
-            <img src="./granadaskebab.jpeg" alt="Granadas Kebab">
+        <div class="menu-section">
+            <h3>"Granadas" (Doble)</h3>
+            <img id="plato" src="./granadaskebab.jpeg" alt="Granadas Kebab">
         </div>
 
-        <h3>Bomba radioactiva (Kebab con salsa picante)</h3>
-        <div id="plato">
-            <img src="./bombaradioactiva.jpeg" alt="Bomba Radioactiva Kebab">
+        <div class="menu-section">
+            <h3>Bomba radioactiva (Kebab con salsa picante)</h3>
+            <img id="plato" src="./bombaradioactiva.jpeg" alt="Bomba Radioactiva Kebab">
         </div>
 
         <p>Todos los menús se pueden personalizar y vienen con bebida y salsas. Por solo +0,30€, puedes añadir patatas fritas.</p>
-        <p><strong>Salsas:</strong> La salsa picante es <strong>únicamente</strong> para el menú <em>Bomba radioactiva</em>.</p>
+        <p>
+            <strong>Salsas:</strong> La salsa picante es 
+            <strong style="color: red; font-style: italic;">únicamente</strong> 
+            para el menú <span style="font-weight: bold; font-style: italic; color: red;">Bomba radioactiva</span>.
+        </p>
     </div>
 </body>
 </html>
