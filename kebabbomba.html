@@ -1,68 +1,59 @@
-<!doctype html>
-<html dir="ltr" lang="ca" class="focus-outline-visible" lazy-loaded="true">
-  <head>
+<!DOCTYPE html>
+<html lang="ca" dir="ltr">
+<head>
     <meta charset="utf-8">
     <title>Kebab Bomba</title>
     <style>
-      #red{
-        color: red;
-      }
-      #centrado{
-      text-align: center;
-    }
-      body{
-        background-color: #e3a26f;
-      }
-      h3{
-        color: green;
-        padding-left: 20px;
-      }
-      #plato{
-        height: 300px;
-        weight: 300px;
-      }
-      
+        #red {
+            color: red;
+        }
+        #centrado {
+            text-align: center;
+        }
+        body {
+            background-color: #e3a26f;
+        }
+        h2, h3 {
+            color: green;
+            padding-left: 20px;
+        }
+        #plato {
+            height: 300px;
+            width: 300px; /* corrected from 'weight' */
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div id="centrado">
-        <h1 id=red>
-            KEBAB BOMBA
-          </h1>
-          <div id=logo>
-            <img src="./kebabbomba.png">
-          </div>
-          <p>
-              ¡Una <span style="color: red;">EXPLOSIÓN</span> de sabores!
-          </p>  
+        <h1 id="red">KEBAB BOMBA</h1>
+        <div id="logo">
+            <img src="./kebabbomba.png" alt="Kebab Bomba Logo">
+        </div>
+        <p>
+            ¡Una <span style="color: red;">EXPLOSIÓN</span> de sabores!
+        </p>  
     </div>
+
     <div id="Menú">
-        <h2>
-            Algunas opciones para elegir:
-        </h2>
+        <h2>Algunas opciones para elegir:</h2>
 
-        <h3>
-            "C4" 
-        </h3>
-      <div id=plato>
-        <img src="./C4.jpeg">
-      </div>
-        <h3>
-          "Granadas" (Doble)
-        </h3>
-      <div id=plato>
-        <img src="./granadaskebab.jpeg">
-      </div>
-        <h3>
-            *Foto* "Bomba radioactiva" (Kebeb con salsa picante)
-        </h3>
+        <h3>"C4"</h3>
+        <div id="plato">
+            <img src="./C4.jpeg" alt="C4 Kebab">
+        </div>
 
-        <p>
-            Todos los menus se pueden personalizar y vienen con bebida y salsas* y por +0,30€ unas patatas fritas.
-        </p> 
-        <p>
-            <span style="font-weight: bold;">Salsas*</span> La salsa picante es <span style="font-weight: bold;">únicamente</span> para el menú <span style="font-weight: bold; font-style: italic;">'Bomba radioactiva'</span>.
-          </p>          
+        <h3>"Granadas" (Doble)</h3>
+        <div id="plato">
+            <img src="./granadaskebab.jpeg" alt="Granadas Kebab">
+        </div>
 
+        <h3>Bomba radioactiva (Kebab con salsa picante)</h3>
+        <div id="plato">
+            <img src="./bombaradioactiva.jpeg" alt="Bomba Radioactiva Kebab">
+        </div>
+
+        <p>Todos los menús se pueden personalizar y vienen con bebida y salsas. Por solo +0,30€, puedes añadir patatas fritas.</p>
+        <p><strong>Salsas:</strong> La salsa picante es <strong>únicamente</strong> para el menú <em>Bomba radioactiva</em>.</p>
     </div>
-  </body>
+</body>
+</html>
